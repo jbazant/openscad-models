@@ -1,5 +1,6 @@
 // SVG models inspiration: https://www.autonalepky.cz/kategriorie-nalepek/zvirata/bazanti/
 // SVG models edit tool: https://yqnn.github.io/svg-path-editor/
+// multiple material guide: https://mattshub.com/blogs/blog/material-change
 
 r = 24.4 / 2;
 total_h = 2.6;
@@ -21,10 +22,10 @@ module pheasant3() {
         union() {
           linear_extrude(img_h2)
             offset(delta = 0.7)
-              import("./coin/models/pheasant3.svg");
+              import("./b-coins/models/pheasant3.svg");
           linear_extrude(img_h1)
             offset(delta = 0.7)
-              import("./coin/models/grass.svg");
+              import("./b-coins/models/grass.svg");
         }
 }
 
@@ -34,11 +35,11 @@ module pheasant4() {
     translate([- 70, - 75, 0])
       union() {
         linear_extrude(img_h2)
-          import("./coin/models/pheasant4a.svg");
+          import("./b-coins/models/pheasant4a.svg");
         linear_extrude(img_h1)
-          import("./coin/models/pheasant4b.svg", convexity=50);
+          import("./b-coins/models/pheasant4b.svg", convexity=50);
         translate([-17, 0, 0]) linear_extrude(img_h3)
-          import("./coin/models/high-grass.svg", convexity=10);
+          import("./b-coins/models/high-grass.svg", convexity=10);
       }
 }
 
@@ -47,10 +48,23 @@ module deer1() {
   scale([s, s, 1])
     translate([- 70, - 75, 0])
       union() {
+        linear_extrude(img_h3)
+          import("./b-coins/models/deer1a.svg");
         linear_extrude(img_h2)
-          import("./coin/models/deer1a.svg");
+          import("./b-coins/models/deer1b.svg");
         linear_extrude(img_h1)
-          import("./coin/models/deer1b.svg");
+          import("./b-coins/models/deer1c.svg");
+      }
+}
+
+// too fine for printing
+module deer2() {
+  s = r / 100;
+  scale([s, s, 1])
+    translate([- 60, - 85, 0])
+      union() {
+        linear_extrude(img_h1)
+          import("./b-coins/models/deer2.svg");
       }
 }
 
@@ -140,11 +154,22 @@ module coin_d1() {
   }
 }
 
+module coin_d1() {
+  union() {
+    coin_base(fn);
+    difference() {
+      translate([- 1, - 3]) deer2();
+      clear_fix();
+    }
+  }
+}
 
-*coin_d1();
+
+coin_d1();
+coin_d2();
 *coin_p3();
 *coin_p3b();
 *coin_p4();
-coin_p4b();
+*coin_p4b();
 
 

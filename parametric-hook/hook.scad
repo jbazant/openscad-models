@@ -5,13 +5,13 @@ wire_width = 5;
 wire_cap_length = 1;
 
 // Diameter of top hook. Note that this specifies diameter of pipe this hook should fit. Real diameter will be extended by wire width.
-top_hook_inner_diameter = 28;
+top_hook_inner_diameter = 8;
 
 // Diameter of bottom hook. Note that this specifies diameter of pipe this hook should fit. Real diameter will be extended by wire width.
-bottom_hook_inner_diameter= 12;
+bottom_hook_inner_diameter= 28;
 
 // Length of straight extension of bottom hook.
-bottom_hook_length=15;
+bottom_hook_length=0;
 
 
 module simple_hook(w, d1, d2, l2, cl=1) {

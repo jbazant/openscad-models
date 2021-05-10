@@ -6,7 +6,5 @@ module circle_text(t, r = 20, s = 5, ex = 1) {
     rotate([0, 0, - i * step])
       translate([0, r, 0])
         linear_extrude(ex)
-          text(t[i], valign = "baseline", halign = "center", size = s);
+          text(t[i], valign = "baseline", halign = "center", size = s, font="style:bold");
 }
-
-circle_text("1918 1939 1945 1968 1989 ");

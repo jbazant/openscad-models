@@ -1,4 +1,5 @@
 include<./config.scad>
+use<../../utils/circle-text.scad>
 
 module coin_base(fn = fn, outline_width = 2) {
   if (!$preview || preview_bottom) {
@@ -24,6 +25,22 @@ module clear_fix() {
 module simple_coin(fn = fn, outline_width = 2) {
   union() {
     coin_base(fn);
+    difference() {
+      children();
+      clear_fix();
+    }
+  }
+}
+
+module coin_with_text(t, text_size = 3) {
+  circle_text_inner_r = r - text_size - 1;
+  coin_base_outline = text_size + 2;
+
+  union() {
+    difference() {
+      coin_base(outline_width = coin_base_outline);
+      translate([0, 0, top_h - 0.5]) circle_text(t, r = circle_text_inner_r, s = text_size);
+    }
     difference() {
       children();
       clear_fix();

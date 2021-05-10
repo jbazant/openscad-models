@@ -1,7 +1,6 @@
 //include<lacie/krabicka.scad>
 
-//include<b-coins/coin.scad>
-include<b-coins/coin-text.scad>
+include<b-coins/coin.scad>
 
 //include<ntb-stand/ntb-stand.scad>
 

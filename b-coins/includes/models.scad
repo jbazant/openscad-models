@@ -11,21 +11,21 @@ module svg(h, name) {
 
 module pheasant3() {
   s = r / 90;
+
   rotate([0, 0, 5])
     scale([s, s, 1])
       translate([- 70, - 75, 0])
         union() {
-          linear_extrude(img_h2)
-            offset(delta = 0.7) // todo do I need that?
-          import(str(models_path, "pheasant3.svg"));
+          svg(img_h2, "pheasant3")
           linear_extrude(img_h1)
             offset(delta = 0.7)
-          import(str(models_path, "grass.svg"));
+              import(str(models_path, "grass.svg"));
         }
 }
 
 module pheasant4() {
   s = r / 90;
+
   scale([s, s, 1])
     translate([- 70, - 75, 0])
       union() {
@@ -37,6 +37,7 @@ module pheasant4() {
 
 module deer1() {
   s = r / 110;
+
   scale([s, s, 1])
     translate([- 70, - 75, 0])
       union() {
@@ -49,6 +50,7 @@ module deer1() {
 // too fine for printing
 module deer2() {
   s = r / 100;
+
   scale([s, s, 1])
     translate([- 60, - 85, 0])
       svg(img_h1, "deer2");
@@ -56,6 +58,7 @@ module deer2() {
 
 module flower2(scale_base = 180) {
   s = r / 180;
+
   scale([s, s, 1])
     translate([- 82, - 82, 0])
       union() {
@@ -64,3 +67,12 @@ module flower2(scale_base = 180) {
         svg(img_h2, "flower2c");
       }
 }
+
+module mother(scale_base = 120) {
+  s = r / 80;
+
+  scale([s, s, 1])
+    translate([- 43, - 75, 0])
+      svg(img_h1, "mother");
+}
+

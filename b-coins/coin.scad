@@ -22,7 +22,7 @@ module coin_p3b() {
       linear_extrude(img_h1)
         translate([0, 2])
           offset(delta = 0.18)
-            text("J.B.", font = "SignPainter:style=HouseScript Semibold", halign = "center", size = 7);
+            text("I.B.", font = "SignPainter:style=HouseScript Semibold", halign = "center", size = 7);
       pheasant3();
     }
   }
@@ -52,11 +52,11 @@ module coin_d2() {
 }
 
 
-coin_d1();
+* coin_d1();
 * coin_d2();
 * coin_p3a();
-* coin_p3b();
+coin_p3b();
 * coin_p4a();
 * coin_p4b();
-
+* coin_with_text("1940 1962 1986 2017 2020 ") flower2();
 

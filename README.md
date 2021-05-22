@@ -1,4 +1,4 @@
-# openscad-models
+# OpenSCAD models
 Personal collection of my 3d models for print.
 
 ## b-coins
@@ -8,7 +8,7 @@ No supports needed.
 
 ![Preview image b-coins](./b-coins/preview.jpeg)
 
-## lacie backup disk box
+## Lacie backup disk box
 Box for Lacie external disk and its cables.
 
 No supports needed.
@@ -25,9 +25,12 @@ No supports needed.
 ![Preview image gym ball stand box 2](./gym ball stand/prev2.jpg)
 
 
-## parametric hook
+## Parametric hook
 Just simple two-sided hook. One can specify diameter of both sides, overhang and diameter of the "wire".
 
 Always print with brim. No supports needed.
 
 ![Preview image hook](./parametric-hook/prev1.jpeg)
+
+## Mosaic
+One basic piece for child game.

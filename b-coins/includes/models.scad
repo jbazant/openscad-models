@@ -57,7 +57,7 @@ module deer2() {
 }
 
 module flower2(scale_base = 180) {
-  s = r / 180;
+  s = r / scale_base;
 
   scale([s, s, 1])
     translate([- 82, - 82, 0])
@@ -68,11 +68,18 @@ module flower2(scale_base = 180) {
       }
 }
 
-module mother(scale_base = 120) {
-  s = r / 80;
+module mother(scale_base = 80) {
+  s = r / scale_base;
 
   scale([s, s, 1])
     translate([- 43, - 75, 0])
       svg(img_h1, "mother");
 }
 
+module atom(scale_base = 180) {
+  s = r / scale_base;
+
+  translate([- 6.27, - 6.27, 0])
+    scale([s, s, 1])
+      svg(img_h1, "atom");
+}

@@ -7,9 +7,9 @@ translate([6, 0, 0]) union() {
   // head
   difference() {
     translate([0, 0, 15]) union() {
-      sphere(d = 10, center = true, $fn = fn);
+      sphere(d = 10, $fn = fn);
       translate([0, 0, - 2]) cylinder(d = 10, h = 2, $fn = fn);
-      translate([0, 0, - 2]) sphere(d = 10, center = true, $fn = fn);
+      translate([0, 0, - 2]) scale([1, 1, .75]) sphere(d = 10, $fn = fn);
     }
     // hole from the bottom
     cylinder(d = 8, h = 16, $fn = fn);

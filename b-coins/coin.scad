@@ -64,6 +64,15 @@ module coin_serpienski(t) {
   }
 }
 
+module coin_sierpinski_simple(t) {
+  a = 12.2;
+  delta = 0.1;
+  steps = 4;
+
+  coin_with_text(t)
+    linear_extrude(img_h1)
+      sierpinsky_triangle(a, steps, delta);
+}
 
 * coin_d1();
 * coin_d2();
@@ -72,5 +81,6 @@ module coin_serpienski(t) {
 * coin_p4a();
 * coin_p4b();
 * coin_with_text("1940 1962 1986 2017 2020 ") flower2();
-coin_serpienski("GENUINE ~ B-COIN ~ ");
+* coin_serpienski("GENUINE ~ B-COIN ~ ");
+coin_sierpinski_simple("bazant.dev ~ B-COIN ~ ");
 

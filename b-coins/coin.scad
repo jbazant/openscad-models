@@ -52,15 +52,6 @@ module coin_d2() {
   simple_coin () translate([- 1, - 3]) deer2();
 }
 
-module coin_serpienski(t) {
-  a = 12.2;
-  delta = 0.1;
-  steps = 4;
-
-  coin_with_text(t)
-    sierpinsky_triangle_multilayer(img_h1, a, steps, delta);
-}
-
 module coin_sierpinski_simple(t) {
   a = 12.2;
   delta = 0.1;
@@ -76,7 +67,6 @@ module coin_sierpinski_simple(t) {
 * coin_p3a();
 * coin_p3b();
 * coin_p4a();
-* coin_p4b();
+coin_p4b();
 * coin_with_text("1940 1962 1986 2017 2020 ") flower2();
-coin_serpienski("bazant.dev ~ B-COIN ~ ");
 * coin_sierpinski_simple("GENUINE ~ B-COIN ~ ");

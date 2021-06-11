@@ -2,6 +2,7 @@
 include<./includes/config.scad>
 use<./includes/utils.scad>
 use<./includes/models.scad>
+use<../utils/sierpinski-triangle.scad>
 
 module coin_p3a() {
   simple_coin() {
@@ -51,12 +52,21 @@ module coin_d2() {
   simple_coin () translate([- 1, - 3]) deer2();
 }
 
+module coin_sierpinski_simple(t) {
+  a = 12.2;
+  delta = 0.1;
+  steps = 4;
+
+  coin_with_text(t)
+    linear_extrude(img_h1)
+      sierpinsky_triangle(a, steps, delta);
+}
 
 * coin_d1();
 * coin_d2();
 * coin_p3a();
-coin_p3b();
+* coin_p3b();
 * coin_p4a();
-* coin_p4b();
+coin_p4b();
 * coin_with_text("1940 1962 1986 2017 2020 ") flower2();
-
+* coin_sierpinski_simple("GENUINE ~ B-COIN ~ ");

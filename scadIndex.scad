@@ -1,6 +1,8 @@
 //include<lacie/krabicka.scad>
 
 //include<b-coins/coin.scad>
+include<b-coins/coin_deep.scad>
+
 
 //include<ntb-stand/ntb-stand.scad>
 
@@ -10,4 +12,4 @@
 
 //include<utils/sierpinski-triangle.scad>
 
-include<mosaic/mosaic.scad>
+//include<mosaic/mosaic.scad>

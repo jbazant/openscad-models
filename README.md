@@ -33,4 +33,7 @@ Always print with brim. No supports needed.
 ![Preview image hook](./parametric-hook/prev1.jpeg)
 
 ## Mosaic
-One basic piece for child game.
+One basic piece for a child game.
+
+## Rainbow
+Baby toy.

@@ -37,3 +37,6 @@ One basic piece for a child game.
 
 ## Rainbow
 Baby toy.
+
+![Preview image rainbow scad model](./rainbow/prev1.png)
+![Preview image rainbow printed](./rainbow/prev2.jpeg)

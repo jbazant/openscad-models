@@ -1,4 +1,6 @@
-include<rainbow/rainbow.scad>
+include<table-side-holder/table-side-holder.scad>
+
+//include<rainbow/rainbow.scad>
 //include<rainbow/prototype.scad>
 
 //include<lacie/krabicka.scad>

@@ -6,8 +6,7 @@ include<rainbow/rainbow.scad>
 //include<b-coins/coin.scad>
 //include<b-coins/coin_deep.scad>
 
-
-//include<ntb-stand/ntb-stand.scad>
+include<ntb-stand/ntb-stand.scad>
 
 //include<parametric-hook/hook.scad>
 
@@ -16,3 +15,5 @@ include<rainbow/rainbow.scad>
 //include<utils/sierpinski-triangle.scad>
 
 //include<mosaic/mosaic.scad>
+
+//include<logo/logo.scad>

@@ -18,6 +18,8 @@
 
 //include<logo/logo.scad>
 
-include<pen-holder/pen-holder.scad>
+//include<pen-holder/pen-holder.scad>
 
 //include<bed-socket/bed-socket.scad>
+
+include<triangle-holder/th.scad>

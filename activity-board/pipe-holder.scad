@@ -3,7 +3,7 @@ module pipe_holder(d_inner, added_length=0) {
   d_outer = d_inner + 2*thickness;
   h = 10;
   support_w = 10;
-  s_length = d_outer / 2 + added_length;
+  s_length = d_inner / 2 + added_length;
 
   module screw_hole() {
     translate([0, 0, h / 2]) rotate([0, -90, 0]) cylinder(r2 = 3, , r1 = 1, h = 3, $fn = 6);
@@ -33,4 +33,4 @@ module pipe_holder(d_inner, added_length=0) {
 
 //pipe_holder(85, 5);
 //pipe_holder(90, 20);
-pipe_holder(115, 7);
+pipe_holder(115, 4);

@@ -1,4 +1,4 @@
-//include<rainbow/rainbow.scad>
+  //include<rainbow/rainbow.scad>
 //include<rainbow/prototype.scad>
 
 //include<lacie/krabicka.scad>
@@ -22,4 +22,5 @@
 
 //include<bed-socket/bed-socket.scad>
 
-include<activity-board/pipe-holder.scad>
+//include<activity-board/pipe-holder.scad>
+include<activity-board/heart.scad>

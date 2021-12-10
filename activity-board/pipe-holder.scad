@@ -32,5 +32,5 @@ module pipe_holder(d_inner, added_length=0) {
 }
 
 //pipe_holder(85, 5);
-pipe_holder(90, 10);
-//pipe_holder(115, 4);
+//pipe_holder(90, 10);
+pipe_holder(115, 5);

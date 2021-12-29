@@ -1,3 +1,6 @@
+height=40;
+pin_dia=13;
+hole_dia=2;
 
 module heart() {
   linear_extrude(5)
@@ -8,8 +11,8 @@ module heart() {
 
 module pin() {
   difference() {
-    cylinder(d = 13, h = 25, $fn=50);
-    cylinder(d = 2, h = 26, $fn=50);
+    cylinder(d = pin_dia, h = height, $fn=50);
+    cylinder(d = hole_dia, h = height+1, $fn=50);
   }
 }
 

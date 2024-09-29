@@ -1,0 +1,11 @@
+{
+    "parameterSets": {
+        "design default values": {
+            "card_l": "93",
+            "card_w": "67",
+            "display_overhang": "2.2",
+            "display_tilt": "5"
+        }
+    },
+    "fileFormatVersion": "1"
+}

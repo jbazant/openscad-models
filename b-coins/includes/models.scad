@@ -16,7 +16,7 @@ module pheasant3() {
     scale([s, s, 1])
       translate([- 70, - 75, 0])
         union() {
-          svg(img_h2, "pheasant3")
+          svg(img_h2, "pheasant3");
           linear_extrude(img_h1)
             offset(delta = 0.7)
               import(str(models_path, "grass.svg"));
@@ -79,7 +79,8 @@ module mother(scale_base = 80) {
 module atom(scale_base = 180) {
   s = r / scale_base;
 
-  translate([- 6.27, - 6.27, 0])
+  translate([- 6.4, - 6, 0])
     scale([s, s, 1])
       svg(img_h1, "atom");
+  cylinder(r=2, h=top_h, $fn=50);
 }

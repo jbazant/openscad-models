@@ -45,7 +45,7 @@ module single_border_ext() {
 }
     
 
-module container() {
+module container_asymetrical() {
     // locks
     for(rz=[180:90:360]) {
         rotate([0,0,rz]) double_lock();
@@ -56,6 +56,21 @@ module container() {
         rotate([0,0,rz]) single_border_deco();
     }
     rotate([0,0,180]) single_border_ext();
+    
+    // main mass
+    mass();
+}
+
+module container_symetrical() {
+    // locks
+    for(rz=[180:90:360]) {
+        rotate([0,0,rz]) double_lock();
+    }
+    
+    // border decorations
+    for(rz=[90:90:360]) {
+        rotate([0,0,rz]) single_border_deco();
+    }
     
     // main mass
     mass();
@@ -76,6 +91,15 @@ module leg() {
     }
 }
 
-rotate([60,0,0]) translate([0,a/2,h/2]) 
-    container();
-leg();
+module stand(symetrical = false) {
+    rotate([60,0,0]) translate([0,a/2,h/2]) {
+        if (symetrical) {
+            container_symetrical();
+        } else {
+            container_asymetrical();
+        }
+    }
+    leg();
+}
+
+stand(true);

@@ -102,4 +102,4 @@ module stand(symetrical = false) {
     leg();
 }
 
-stand(false);
+stand(fa);

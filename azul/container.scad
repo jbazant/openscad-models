@@ -4,7 +4,8 @@ use <BOSL/shapes.scad>
 include <settings.scad>
 use <utils.scad>
 
-container();
+//container();
+lid();
 
 module container() {
     // todo stopper hole
@@ -265,10 +266,20 @@ module lid() {
         }
     }
     
+    module stopper_mass() {
+        // TODO
+        color("blue") cuboid(
+                [12, container_y, container_h3], 
+                p1=[container_x-1-12, -1, container_h0+container_h1+container_h2],
+                edges=EDGES_Z_ALL
+            );
+    }
+    
     difference() {
         union() {
             body();
             translate([body_x-4.2 ,body_y/2, 0]) stopper();
+            stopper_mass();
         }
         for (tx=[6 : shop_w + gap : body_x-shop_w]) {
             player_num = tx == 6 ? 4 : tx > body_x - 2*shop_w ? 3 : 2;

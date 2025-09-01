@@ -5,11 +5,11 @@ use <BOSL/shapes.scad>
 
 $fn=20;
 
-//box1a();
+box1a();
 //box1b();
 
 //box2a();
-box2b();
+//box2b();
 
 //tesla_bottom();
 //tesla_doublebottom();

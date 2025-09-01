@@ -7,8 +7,8 @@ pin_d=8;
 
 // ----------
 
-//optimist_hull();
-translate([0, -6, 5]) rudder();
+optimist_hull();
+//translate([0, -6, 5]) rudder();
 //translate([0, -84, 5]) sail();
 
 // ----------
